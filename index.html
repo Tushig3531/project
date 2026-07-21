@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Tushig Erdenebulgan</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Tushig Erdenebulgan" name="keywords">
+        <meta content="Personal Portfolio" name="description">
+        <link rel="icon" type="image/png" href="img/cat.png">
+        <link href="img/favicon.ico" rel="icon">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+
+    <body data-spy="scroll" data-target=".navbar" data-offset="51">
+    
+        <!-- Blog Start -->
+<div class="blog" id="projects" style="padding-top: 100px; padding-bottom: 100px;">
+    <div class="container">
+         
+        <div class="section-header text-center wow zoomIn">
+            <h2>Tushig Erdenebulgan</h2>
+            <p>This page highlights a selection of my project work. For my full portfolio, background, and contact information, visit the link below.</p>
+            <a class="btn" href="https://tushige.netlify.app" rel="noopener">Full Portfolio <i class="fa fa-angle-right"></i></a>
+        </div>
+
+        <div class="section-header text-center wow zoomIn">
+            <!-- <p>Selected Work</p> -->
+            <h2>Projects</h2>
+        </div>
+
+        <div class="projects-grid">
+
+
+            <div class="project-card wow fadeInUp">
+            <div class="project-meta-top">
+                <span>Personal</span>
+                <span>Hardware</span>
+                <span>IDS/SIEM</span>
+            </div>
+            <h2>PiSec Lab</h2>
+            <p>
+                Built a <b>Raspberry Pi-based IDS/SIEM home lab</b> where the Pi creates a local Wi-Fi network and client devices
+                connect through it. Network traffic is captured with <b>tcpdump</b>, completed PCAP files are moved into an IDS input
+                folder, and an IDS watcher analyzes them for suspicious activity. Alerts are written to <b>alerts.jsonl</b>, displayed
+                in a dashboard, and processed PCAP files are moved to an archive or deleted after successful ingestion.
+            </p>
+            <p>
+                At the core of the lab are <b>16 custom YAML detection rules</b> covering port and service scans
+                (SSH, RDP, SMB, Telnet, ADB, Docker API, and router admin ports), volumetric anomalies (SYN, ICMP, and TCP reset spikes),
+                DNS-based threats (dynamic DNS, tunneling and remote-access services like ngrok, and NXDOMAIN spikes), and large outbound
+                transfers that can signal exfiltration. Each rule is tuned with <b>thresholds, time windows, cooldowns, per-device
+                multipliers, and trusted-device weighting</b>, so known hosts trigger fewer false positives while suspicious behavior
+                still raises alerts.
+            </p>
+            <p>
+                The dashboard supports alert review, searchable SIEM metadata, custom IDS rule creation, and basic firewall rule creation.
+                A SIEM ingest pipeline extracts flow, DNS, device, and traffic metadata from PCAPs and stores it in <b>SQLite</b>.
+                I also used <b>Tailscale</b> to access the dashboard through a private network instead of exposing it publicly.
+            </p>
+            <div class="project-tags">
+                <span>Raspberry Pi</span>
+                <span>tcpdump</span>
+                <span>PCAP</span>
+                <span>IDS</span>
+                <span>SIEM</span>
+                <span>SQLite</span>
+                <span>Tailscale</span>
+                <span>YAML Rules</span>
+                <span>Detection Engineering</span>
+                <span>DNS/C2 Detection</span>
+            </div>
+            <div class="project-actions">
+                <a class="btn" href="https://github.com/Tushig3531/IDS-PiSec-Lab/tree/main/v3" target="_blank" rel="noopener">Write-Up<i class="fa fa-angle-right"></i></a>
+            </div>
+        </div>
+
+            <div class="project-card wow fadeInUp">
+                <div class="project-meta-top">
+                    <span>Personal</span>
+                    <span>Linux</span>
+                </div>
+                <h2>CTF Challenge</h2>
+                <p>
+                Completed <b>153+</b> TryHackMe rooms, earned <b>35 badges</b>, and ranked in the <b>top 1%</b> of all users globally,
+                covering packet analysis, log investigation, web exploitation, authentication attacks, privilege escalation,
+                and incident response scenarios. I published structured technical write-ups that document the attack path,
+                evidence collected, commands used, findings, remediation ideas, and defensive takeaways. This project shows my
+                consistency in hands-on security practice and my ability to explain technical investigations clearly.
+            </p>
+                <div class="project-tags">
+                    <span>TryHackMe</span>
+                    <span>CTF</span>
+                    <span>Write-ups</span>
+                </div>
+                <div class="project-actions">
+                    <a class="btn" href="https://github.com/Tushig3531/TryHackMe" target="_blank" rel="noopener">Code <i class="fa fa-angle-right"></i></a>
+                    <a class="btn" href="https://tryhackme.com/p/Tushig3531" target="_blank" rel="noopener">TryHackMe <i class="fa fa-angle-right"></i></a>
+                </div>
+            </div>
+
+            <div class="project-card wow fadeInUp">
+            <div class="project-meta-top">
+                <span>iOS App</span>
+                <span>Swift, Firebase, Core ML</span>
+            </div>
+            <h2>Miracle Baseball Tracker App</h2>
+            <p>
+                Developed and deployed an iOS baseball performance tracking app for coaches and players.
+                The app supports coach/player accounts, team creation, code-based team joining, player approval,
+                pitch video upload, manual release/catch frame selection, performance tracking, team analytics,
+                individual player summaries, catcher heatmaps, and profile management. I used <b>Swift, Firebase Auth,
+                Firestore, Firebase Storage, Core ML, Vision, AVFoundation, and App Store Connect</b> to build a complete
+                mobile application from development to App Store release.
+            </p>
+            <div class="project-tags">
+                <span>Swift</span>
+                <span>Firebase</span>
+                <span>Core ML</span>
+                <span>Vision</span>
+                <span>Analytics</span>
+                <span>App Store</span>
+            </div>
+            <div class="project-actions">
+                <a class="btn" href="https://apps.apple.com/mn/app/miracle-baseball-tracker/id6765843583" target="_blank" rel="noopener">App Store <i class="fa fa-angle-right"></i></a>
+            </div>
+        </div>
+        <div class="project-card wow fadeInUp">
+    <div class="project-meta-top">
+        <span>iOS App</span>
+        <span>Swift, Claude API, Firebase</span>
+    </div>
+    <h2>AI Fitness & Nutrition Tracker</h2>
+    <p>
+        Built an iOS app to track my meals and workouts, powered by the <b>Anthropic Claude API</b>. I log a meal by
+        listing its ingredients and how it was prepared, and the app uses the Claude model to estimate calories and
+        generate personalized workouts that adapt over time. All data — what I ate and which exercises felt hard — is
+        stored in <b>Firebase</b>, so recommendations get more accurate and stay aligned with foods I like but keep healthy.
+    </p>
+    <p>
+        The app has its own habit-scoring system: healthy choices earn points and unhealthy ones lose them. Using
+        <b>Google APIs, Core Location, and device sensors</b>, it applies geofencing — if I get too close to a fast-food
+        location it deducts points, and it identifies gym locations to gate a daily fitness challenge that I have to
+        complete on-site before leaving without losing points.
+    </p>
+    <div class="project-tags">
+        <span>Swift</span>
+        <span>Claude API</span>
+        <span>Firebase</span>
+        <span>Core Location</span>
+        <span>Geofencing</span>
+        <span>Google Maps API</span>
+    </div>
+    <div class="project-actions">
+        <!-- Add your links here later, then uncomment:
+        <a class="btn" href="ADD_GITHUB_LINK" target="_blank" rel="noopener">Code <i class="fa fa-angle-right"></i></a>
+        <a class="btn" href="ADD_APP_STORE_LINK" target="_blank" rel="noopener">App Store <i class="fa fa-angle-right"></i></a>
+        -->
+    </div>
+</div>
+
+            <div class="project-card wow fadeInUp">
+                <div class="project-meta-top">
+                    <span>Security</span>
+                    <span>Python</span>
+                </div>
+                <h2>VPN</h2>
+                <p>
+                Built a Python-based command-line VPN learning demo focused on secure communication and protocol design.
+                The client and server perform configurable cipher negotiation, use <b>Diffie-Hellman</b> key exchange to
+                derive a shared secret, and protect messages with symmetric encryption and <b>HMAC-SHA256</b> integrity checks.
+                This project helped me understand encrypted client-server workflows, key exchange, message authentication,
+                and the importance of protocol structure.
+            </p>
+                <div class="project-tags">
+                    <span>Diffie-Hellman</span>
+                    <span>AES</span>
+                    <span>HMAC</span>
+                </div>
+                <div class="project-actions">
+                    <a class="btn" href="https://github.com/Tushig3531/VPN" target="_blank" rel="noopener">Code <i class="fa fa-angle-right"></i></a>
+                </div>
+            </div>
+
+            <div class="project-card wow fadeInUp">
+                <div class="project-meta-top">
+                    <span>Full Stack</span>
+                    <span>Python, JavaScript</span>
+                </div>
+                <h2>Password Manager</h2>
+                <p>
+                    Built a Flask-based password manager web application focused on secure authentication and encrypted credential
+                    storage. The app uses <b>bcrypt</b> for login protection, <b>scrypt</b> for key derivation, and <b>AES-GCM</b>
+                    to encrypt stored credentials before saving them to the database. I also built REST APIs for creating,
+                    reading, updating, and deleting encrypted profiles, with a JavaScript frontend for user interaction.
+                </p>
+                <div class="project-tags">
+                    <span>Flask</span>
+                    <span>bcrypt</span>
+                    <span>AES-GCM</span>
+                </div>
+                <div class="project-actions">
+                    <a class="btn" href="https://github.com/Tushig3531/Password-Manager" target="_blank" rel="noopener">Code <i class="fa fa-angle-right"></i></a>
+                </div>
+            </div>
+
+
+            <div class="project-card wow fadeInUp">
+                <div class="project-meta-top">
+                    <span>Full Stack</span>
+                    <span>Java, Python</span>
+                </div>
+                <h2>Luther Database</h2>
+                <p>
+                    Built a Java desktop database application using Luther College academic data and synthetic student records.
+                    I designed a normalized <b>SQLite</b> schema with primary and foreign keys, created Python scripts to clean
+                    and prepare CSV data, and built a Java Swing interface for browsing departments, faculty, courses, sections,
+                    enrollments, and student transcripts. The project also includes a transcript view and database triggers
+                    to improve data integrity.
+                </p>
+                <div class="project-tags">
+                    <span>Java Swing</span>
+                    <span>SQLite</span>
+                    <span>Gradle</span>
+                </div>
+                <div class="project-actions">
+                    <a class="btn" href="https://github.com/Tushig3531/Database" target="_blank" rel="noopener">Code <i class="fa fa-angle-right"></i></a>
+                </div>
+            </div>
+
+            <div class="project-card wow fadeInUp">
+                <div class="project-meta-top">
+                    <span>Full Stack</span>
+                    <span>Chemistry, JavaScript</span>
+                </div>
+                <h2>Chem-Helper</h2>
+                <p>
+                    Built a browser-based chemistry helper app using HTML, CSS, and JavaScript. The app balances chemical reactions
+                    using a linear algebra approach with Gaussian elimination and exact fractions to reduce rounding errors.
+                    It also generates simple text-based Lewis structures, estimates bonding and lone pairs, identifies basic
+                    VSEPR shapes, and provides clear validation messages when an input is outside the supported scope.
+                </p>
+                <div class="project-tags">
+                    <span>JavaScript</span>
+                    <span>Linear Algebra</span>
+                    <span>VSEPR</span>
+                </div>
+                <div class="project-actions">
+                    <a class="btn" href="https://github.com/Tushig3531/chem" target="_blank" rel="noopener">Code <i class="fa fa-angle-right"></i></a>
+                    <a class="btn" href="https://chem-helper.com/" target="_blank" rel="noopener">Live Site <i class="fa fa-angle-right"></i></a>
+                </div>
+            </div>
+
+            <div class="project-card wow fadeInUp">
+                <div class="project-meta-top">
+                    <span>Full Stack</span>
+                    <span>Java</span>
+                </div>
+                <h2>MLB Database Viewer</h2>
+                <p>
+                    Built a Java desktop application for exploring Major League Baseball data. The project reads team, roster,
+                    and stadium information from JSON and CSV files, processes the data using Jackson and OpenCSV, stores it in
+                    a structured SQLite database through JDBC, and displays it through a Java Swing GUI. Users can browse teams,
+                    player rosters, stadium information, and team logos inside one desktop application.
+                </p>
+                <div class="project-tags">
+                    <span>Java</span>
+                    <span>SQLite</span>
+                    <span>Maven</span>
+                </div>
+                <div class="project-actions">
+                    <a class="btn" href="https://github.com/Tushig3531/database-viewer" target="_blank" rel="noopener">Code <i class="fa fa-angle-right"></i></a>
+                </div>
+            </div>
+
+            <div class="project-card wow fadeInUp">
+                <div class="project-meta-top">
+                    <span>Full Stack</span>
+                    <span>Python, JavaScript</span>
+                </div>
+                <h2>Recipe Finder Web Application</h2>
+                <p>
+                    Built a full-stack recipe finder web application using Flask, SQLite, SQLAlchemy, Flask JWT, Docker, Google Cloud Run,
+                    and a JavaScript frontend. Users can create accounts, search recipes by ingredient or name, save favorites,
+                    manage a virtual fridge, and compare recipe requirements with ingredients they already have. The backend is
+                    containerized and deployed separately from the frontend with CORS support.
+                </p>
+                <div class="project-tags">
+                    <span>Flask</span>
+                    <span>Docker</span>
+                    <span>Cloud Run</span>
+                </div>
+                <div class="project-actions">
+                    <a class="btn" href="https://github.com/Tushig3531/RecipesApp-Project" target="_blank" rel="noopener">Code <i class="fa fa-angle-right"></i></a>
+                    <a class="btn" href="https://recipesapps.com/" target="_blank" rel="noopener">Live Site <i class="fa fa-angle-right"></i></a>
+                </div>
+            </div>
+
+            <div class="project-card wow fadeInUp">
+                <div class="project-meta-top">
+                    <span>Full Stack</span>
+                    <span>Java</span>
+                </div>
+                <h2>Student Registration App</h2>
+                    <p>
+                        Built a Java desktop application for managing student profiles with multiple display views. The app uses Swing,
+                        AWT, ImageIO, and an MVC-style structure to separate data handling from the interface. It supports image selection,
+                        cropping, resizing, profile display, event handling, and multiple layout modes such as card, column, and list views.
+                    </p>
+                <div class="project-tags">
+                    <span>Java</span>
+                    <span>Swing</span>
+                    <span>MVC</span>
+                </div>
+                <div class="project-actions">
+                    <a class="btn" href="https://github.com/Tushig3531/Java-Projects/tree/main/Student%20Registration%20App" target="_blank" rel="noopener">Code <i class="fa fa-angle-right"></i></a>
+                </div>
+            </div>
+
+            <div class="project-card wow fadeInUp">
+                <div class="project-meta-top">
+                    <span>Full Stack</span>
+                    <span>Python, JavaScript</span>
+                </div>
+                <h2>Local Farm Inventory Management System</h2>
+                <p>
+                    Built an online shopping and inventory management application for a small business class project. Users can browse
+                    available products and add items to a cart, while the admin side manages inventory availability through the database.
+                    The project uses Flask, SQLite, SQLAlchemy, HTML, CSS, and JavaScript to connect backend inventory logic with a simple
+                    shopping interface.
+                </p>
+                <div class="project-tags">
+                    <span>SQLite</span>
+                    <span>SQLAlchemy</span>
+                    <span>Inventory</span>
+                </div>
+                <div class="project-actions">
+                    <a class="btn" href="https://github.com/Tushig3531/Internet-Programming/tree/main/Creating%20Farm%20Store" target="_blank" rel="noopener">Code <i class="fa fa-angle-right"></i></a>
+                </div>
+            </div>
+
+            <div class="project-card wow fadeInUp">
+                <div class="project-meta-top">
+                    <span>Personal</span>
+                    <span>Mathematics</span>
+                </div>
+                <h2>Mathematical Application Activities & CoCalc Modules</h2>
+                <p>
+                    Completed applied mathematics projects focused on real-world problem solving and computational reasoning.
+                    These projects included optimization problems, modeling tasks, and CoCalc modules using Python to test formulas,
+                    visualize ideas, and solve complex mathematical questions. This work strengthened my logical thinking,
+                    mathematical modeling, and ability to translate real problems into structured solutions.
+                </p>
+                <div class="project-tags">
+                    <span>Python</span>
+                    <span>Math</span>
+                    <span>CoCalc</span>
+                </div>
+                <div class="project-actions">
+                    <a class="btn" href="https://github.com/Tushig3531/Application-Activities" target="_blank" rel="noopener">App/Act Link <i class="fa fa-angle-right"></i></a>
+                    <a class="btn" href="https://github.com/Tushig3531/CoCalc" target="_blank" rel="noopener">CoCalc Link <i class="fa fa-angle-right"></i></a>
+                </div>
+            </div>
+
+            <div class="project-card wow fadeInUp">
+                <div class="project-meta-top">
+                    <span>Full Stack</span>
+                    <span>Python, JavaScript</span>
+                </div>
+                <h2>Cloned Popular Websites & Utility Apps</h2>
+                <p>
+                    Built several small applications to practice full-stack and frontend development, including a notebook app,
+                    to-do list app, movie recommender, OAuth demo, prime number finder, mass image downloader, and calculator app.
+                    These projects helped me practice Python, JavaScript, HTML, CSS, APIs, authentication concepts, and reusable
+                    utility development. I later used the mass image downloader to support my recipe project dataset.
+                </p>
+                <div class="project-tags">
+                    <span>Python</span>
+                    <span>JavaScript</span>
+                    <span>Utilities</span>
+                </div>
+                <div class="project-actions">
+                    <a class="btn" href="https://github.com/Tushig3531/Internet-Programming" target="_blank" rel="noopener">Code <i class="fa fa-angle-right"></i></a>
+                </div>
+            </div>
+
+            <div class="project-card wow fadeInUp">
+                <div class="project-meta-top">
+                    <span>Personal</span>
+                    <span>Python</span>
+                </div>
+                <h2>Encoding Cipher</h2>
+                <p>
+                    Built Python implementations of ciphers and cryptographic methods learned from my Information Security and Assurance
+                    coursework. This project helped me understand how encoding, encryption, substitution, block/stream concepts,
+                    and key-based transformations work at a practical level. It also strengthened my foundation for later projects
+                    involving hashing, HMAC, AES, and secure communication.
+                </p>
+                <div class="project-tags">
+                    <span>Python</span>
+                    <span>Ciphers</span>
+                    <span>Cryptography</span>
+                </div>
+                <div class="project-actions">
+                    <a class="btn" href="https://github.com/Tushig3531/Cipher" target="_blank" rel="noopener">Code <i class="fa fa-angle-right"></i></a>
+                </div>
+            </div>
+
+            <div class="project-card wow fadeInUp">
+                <div class="project-meta-top">
+                    <span>Personal</span>
+                    <span>Python</span>
+                </div>
+                <h2>100 Days LeetCode Challenge</h2>
+                    <p>
+                        Practiced algorithm and data structure problems consistently to improve problem-solving discipline and Python fluency.
+                        This challenge helped me strengthen core programming concepts such as arrays, strings, hash maps, recursion,
+                        sorting, searching, and logical reasoning. It also supported my preparation for technical interviews and better
+                        code-writing habits.
+                    </p>
+                <div class="project-tags">
+                    <span>Python</span>
+                    <span>Algorithms</span>
+                    <span>Data Structures</span>
+                </div>
+                <div class="project-actions">
+                    <a class="btn" href="https://github.com/Tushig3531/LeetCode" target="_blank" rel="noopener">Code <i class="fa fa-angle-right"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+    
+
+        
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="https://kit.fontawesome.com/d0d0408b14.js" crossorigin="anonymous"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/typed/typed.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/isotope/isotope.pkgd.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
