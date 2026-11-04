@@ -36,6 +36,39 @@
 
         <div class="projects-grid">
 
+            <div class="project-card wow fadeInUp">
+            <div class="project-meta-top">
+                <span>Personal</span>
+                <span>Home Lab</span>
+                <span>SIEM</span>
+            </div>
+            <h2>Splunk Home Lab</h2>
+            <p>
+                Building a <b>Splunk SIEM home lab</b> that simulates how a real organization collects and monitors logs.
+                <b>Splunk Enterprise</b> runs on my MacBook as the central server, and a <b>Universal Forwarder</b> on a
+                Raspberry Pi sends Linux logs into a dedicated index. A second forwarder on the Mac sends its own system logs,
+                so the lab already has multiple endpoints reporting in.
+            </p>
+            <p>
+                Next, I am adding <b>Pi hole</b> DNS logs and <b>Suricata</b> network alerts, separate indexes for each data type,
+                TLS and role based access, <b>MITRE ATT&CK</b> mapped detections written in <b>SPL</b>, a threat intel lookup,
+                and dashboards. I will then run attacks against my own lab and publish <b>SOC style incident write ups</b>
+                on GitHub.
+            </p>
+            <div class="project-tags">
+                <span>Splunk</span>
+                <span>SPL</span>
+                <span>Universal Forwarder</span>
+                <span>Raspberry Pi</span>
+                <span>Suricata</span>
+                <span>Pi hole</span>
+                <span>MITRE ATT&CK</span>
+                <span>Detection Engineering</span>
+            </div>
+            <div class="project-actions">
+                <a class="btn" href="https://github.com/Tushig3531/Splunk-Home-Lab" target="_blank" rel="noopener">Write-Up<i class="fa fa-angle-right"></i></a>
+            </div>
+        </div>
 
             <div class="project-card wow fadeInUp">
             <div class="project-meta-top">
